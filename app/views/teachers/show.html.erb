@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+<div class ="show-page">
+<h1>
+  
+  Teacher's Name: <%= "#{@teacher.name}" %>
+</h1>
+
+	<p>  
+	  Room Number: <%= @teacher.room %>
+	</p>
+
+	<p>  
+	  Subject: <%= @teacher.subject %>
+	</p>
+
+	<div class = "btn btn-group" >
+		<%= link_to 'Edit', edit_teacher_path(@teacher), class: "btn btn-default" %> 
+		<%= link_to 'Back', teachers_path, class: "btn btn-default" %>
+
+	</div>
+
+
+
+
+</div>

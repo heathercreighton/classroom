@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+<div class="show-page">
+	<h1>
+	  Pet Name: 
+	  <%= @pet.name %>
+	</h1>
+
+	<p>
+	  Breed: 
+	  <%= @pet.breed %>
+	</p>
+
+	<p>
+	  Food: 
+	  <%= @pet.food %>
+	</p>
+
+	<div class = "btn btn-group">
+	<%= link_to 'Edit', edit_pet_path(@pet), class: "btn btn-default" %> |
+	<%= link_to 'Back', pets_path, class: "btn btn-default" %>
+	</div>
+</div>

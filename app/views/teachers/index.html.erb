@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Our Wonderful Teachers</h1>
+
+<%= link_to 'New Teacher', new_teacher_path, class: "btn btn-info" %>
+
+
+
+
+
+
+  
+    <ul class ="nav nav-pills" role ="tablist">
+      <li><%= link_to "All Teachers", teachers_path %></li>
+      
+      <% @my_teachers.each do |t| %>
+         <li><%= link_to t.name, teachers_path(name: t.name) %> </li>
+      <% end %>
+
+    </ul>
+  
+
+<div class="row">
+
+     <% @teachers.each do |teacher| %>
+      <div class="col-md-4">
+          <div class="well">
+
+            <p>Teacher: <%=  "#{teacher.name}" %></p>
+
+            <p>Room Number: <%= "#{teacher.room}" %></p>
+            <p>Subject: <%= "#{teacher.subject}" %></p>
+
+
+
+        <p><%= link_to 'Show', teacher, class: "btn btn-primary" %>
+        <%= link_to 'Edit', edit_teacher_path(teacher), class: "btn btn-primary" %>
+        <%= link_to 'Destroy', teacher, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %></p>
+      </div>
+    </div>
+    <% end %>
+  
+</div>
+
+
+
