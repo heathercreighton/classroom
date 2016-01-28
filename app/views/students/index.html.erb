@@ -24,7 +24,7 @@
         <p>Student's Name: <%= "#{student.name}" %></p>
         <p>Table No.: <%= "#{student.table}" %></p>
         <p>Seat No. :<%= "#{student.seat}" %></p>
-
+        <p>Grades Average: <%="#{student.grade}" %></p>
 
         <p><%= link_to 'Show', student, class: "btn btn-primary" %>
         <%= link_to 'Edit', edit_student_path(student),class: "btn btn-primary" %>
